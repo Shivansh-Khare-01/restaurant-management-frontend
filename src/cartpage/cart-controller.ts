@@ -61,7 +61,7 @@ export const cartController = () => {
       0
     );
     const deliveryCharge = deliveryOption === "DINE_IN" ? 0 : 50;
-    const taxes = deliveryOption === "DINE_IN" ? 0 : 5;
+    const taxes = 5;
     return {
       itemTotal,
       deliveryCharge,
