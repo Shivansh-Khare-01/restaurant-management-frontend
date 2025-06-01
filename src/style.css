@@ -1,0 +1,205 @@
+:root {
+  \--color-bg: #f0f5f3;
+  \--color-white: #ffffff;
+  \--color-gray-100: #f0f0f0;
+  \--color-gray-200: #e2e8f0;
+  \--color-gray-500: #6b7280;
+  \--color-gray-700: #374151;
+  \--color-gray-900: #111827;
+  \--color-blue-50: #eff6ff;
+  \--color-blue-500: #3b82f6;
+  \--color-blue-600: #2563eb;
+  \--color-green-50: #ecfdf5;
+  \--color-green-500: #22c55e;
+  \--color-purple-50: #faf5ff;
+  \--color-purple-600: #8b5cf6;
+  \--color-orange-50: #fff7ed;
+  \--color-orange-500: #f59e0b;
+
+  \--radius-lg: 0.75rem;
+  \--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--color-bg);
+  font-family: "Inter", sans-serif;
+}
+
+body.menu-page {
+  background-color: #f8f8f8 !important;
+  padding: 1rem !important;
+}
+
+#content {
+  display: flex;
+  gap: 10px;
+  height: 100vh;
+}
+
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  gap: 10px;
+}
+
+.circle {
+  width: 70px;
+  height: 79.01px;
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  margin-top: 10px;
+}
+
+.sidebar {
+  width: 65px;
+  background: var(--color-white);
+  border-right: 1px solid var(--color-gray-200);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  margin: 0px 20px 20px 20px;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.sidebar nav {
+  margin-top: 0.5rem;
+  flex-grow: 1;
+}
+
+.sidebar .menu-item {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  height: 50px;
+  width: 50px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  transition: background 0.2s;
+  text-decoration: none;
+  color: var(--color-gray-700);
+}
+
+.sidebar .menu-item:hover {
+  background: var(--color-gray-100);
+}
+
+.sidebar .menu-item.active {
+  background: #d9d9d9;
+  color: black;
+}
+
+.bottom-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .icon {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 999px;
+  padding: 0 1rem;
+  width: 438px; /* adjust as needed */
+  height: 70px;
+  box-shadow: var(--shadow-sm); /* optional for styling */
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.search-icon {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-bg); /* light grey/greenish */
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+  background: transparent;
+}
+
+.main-content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  background-color: var(--color-white);
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: var(--shadow-sm);
+  margin: 0px 20px 20px 0px;
+  overflow: auto; /* Changed from hidden to auto to enable scrolling */
+}
+
+/* Custom scrollbar styling */
+.main-content::-webkit-scrollbar,
+.table-container::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar */
+}
+
+.main-content::-webkit-scrollbar-track,
+.table-container::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track */
+}
+
+.main-content::-webkit-scrollbar-thumb,
+.table-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-200); /* Light color */
+  border-radius: 20px; /* Rounded corners */
+}
+
+/* Hide scrollbar arrows/buttons */
+.main-content::-webkit-scrollbar-button,
+.table-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* For Firefox */
+.main-content,
+.table-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gray-200) transparent;
+}

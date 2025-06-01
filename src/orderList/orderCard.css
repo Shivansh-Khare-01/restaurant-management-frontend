@@ -1,0 +1,226 @@
+.order-card {
+  background-color: #ffeacc;
+  border-radius: 16px;
+  padding: 16px;
+  width: 280px;
+  font-family: "Segoe UI", sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+/* Different status colors */
+.order-card--done {
+  background-color: #c8f7e1;
+}
+
+.order-card--takeaway {
+  background-color: #C2D4D9;
+}
+
+.order-card--dinein {
+  background-color: #ffeacc;
+}
+
+.order-card__header {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4px;
+  height: 90px; /* Fixed height for header */
+}
+
+.order-header-static{
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.order-header-static span{
+  margin-right: 10px;
+}
+
+.order-card__header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.order-card__icon {
+  color: #5c6ac4;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+.order-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.order-card__order-number {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+
+.order-card__subtext {
+  font-size: 10px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.order-card__type-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.order-card__type {
+  padding: 6px 12px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
+  margin-bottom: 6px;
+}
+
+/* Status type styles */
+.order-card__type--dinein {
+  background-color: #ffd9a6;
+  color: #c26600;
+}
+
+.order-card__type--takeaway {
+  background-color: #d9e6f0;
+  color: #4a6585;
+}
+
+.order-card__type--done {
+  background-color: #c8f7e1;
+  color: #0d904b;
+}
+
+/* Select styling */
+.order-card__select {
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 8px;
+  padding-right: 20px;
+}
+
+.order-card__item-count {
+  font-weight: 500;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.order-card__item-section {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  flex: 1;
+  min-height: 120px; /* Fixed minimum height */
+}
+
+.order-card__item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.order-card__value-set {
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.order-card__item {
+  display: flex;
+  margin: 8px 0;
+  margin-left: 20px;
+  align-items: flex-start;
+}
+
+.order-card__item-qty {
+  min-width: 24px;
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.order-card__item-name {
+  flex: 1;
+}
+
+.order-card__footer {
+  text-align: center;
+  margin-top: 4px;
+}
+
+.order-card__button {
+  width: 130px;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+/* Button status styles */
+.order-card__button--processing {
+  background-color: #f4a340;
+  color: white;
+}
+
+.order-card__button--done {
+  background-color: #22c55e;
+  color: white;
+}
+
+.order-card__button--order-done {
+  background-color: #6b7280;
+  color: white;
+}
+
+.order-card__button--not-picked-up {
+  background-color: #9BAEB3;
+  color: #3B413D;
+}
+
+.order-card__status-icon {
+  font-size: 16px;
+}
+
+.hide {
+  opacity: 0;
+}

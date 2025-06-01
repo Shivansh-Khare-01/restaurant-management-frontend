@@ -1,0 +1,32 @@
+.order-listing {
+  padding: 20px;
+  height: calc(100%);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-listing__title {
+  margin-top: 0;
+  font-size: 28px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+  align-self: flex-start;
+  padding-left: 20px;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.order-listing__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 40px;
+  
+  padding: 20px 20px 20px 40px;
+  margin-bottom: auto;
+  width: 100%;
+  justify-content: start;
+}

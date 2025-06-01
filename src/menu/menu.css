@@ -1,0 +1,258 @@
+.p-4 {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+.p-4 h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.p-4 p {
+  color: #231100;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Search input container */
+.p-4 .search-container {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 10px 0;
+}
+
+.p-4 .search-container input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #e8f0ee;
+  font-size: 0.875rem;
+}
+
+.p-4 .search-container svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+/* Category buttons */
+.p-4 .flex {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
+.p-4 .flex button {
+  width: 60px;
+  height: 60px;
+  border-radius: 0.5rem;
+  border: 1px solid #616161;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  font-size: 0.5rem;
+  cursor: pointer;
+  color: #616161;
+}
+
+.p-4 .category-icon {
+  font-size: 1rem;
+}
+
+.p-4 .category-icon span {
+  z-index: 1000;
+}
+
+.p-4 .flex button.active {
+  background-color: #616161;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Make SVG paths white when button is active */
+.p-4 .flex button.active svg path {
+  fill: white !important;
+}
+
+/* Ensure emoji icons remain visible when active */
+.p-4 .flex button.active .category-icon {
+  color: white;
+}
+
+/* Category heading */
+.p-4 .category-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Products grid */
+.p-4 .menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Product card */
+.p-4 .menu-grid > div {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  min-width: 175px;
+  box-shadow: 1px 1px 4px grey;
+}
+
+.p-4 .menu-grid > div img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.p-4 .product-details {
+  padding: 0.5rem;
+  background-color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 70px;
+  box-shadow: 2px 2px 10px rgba(247, 247, 247, 0.1);
+}
+
+.p-4 .product-info-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.p-4 .product-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.p-4 .product-info p {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Add button */
+.p-4 .add-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Quantity controls */
+.p-4 .quantity-controls {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  width: fit-content;
+}
+
+.p-4 .quantity-controls button {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: #e0e0e0;
+  border-radius: 3px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid rgb(196, 196, 196);
+  margin: 0 3px;
+}
+
+.p-4 .quantity-controls button:active {
+  border: 1px solid rgb(175, 174, 174);
+}
+
+.p-4 .quantity-controls span {
+  margin: 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: black;
+}
+
+/* Hide quantity controls by default */
+.p-4 .quantity-controls {
+  display: none;
+}
+
+/* Show quantity controls when item is in cart */
+.p-4 .menu-grid > div.in-cart .quantity-controls {
+  display: flex;
+}
+
+/* Hide add button when quantity controls are shown */
+.p-4 .menu-grid > div.in-cart .add-button {
+  display: none;
+}
+
+/* Next button container */
+.p-4 .mt-6 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-bottom: 8px;
+}
+
+/* Next button */
+.p-4 .mt-6 button {
+  width: 150px;
+  padding: 0.75rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Total amount display */
+.p-4 p span {
+  font-weight: 600;
+}
+
+.p-4 .category-name-icon {
+  font-size: 9px;
+}
+.p-4 .icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}

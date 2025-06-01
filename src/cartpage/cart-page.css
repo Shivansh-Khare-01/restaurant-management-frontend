@@ -1,0 +1,473 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.cart-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: 8px;
+}
+
+.cart-header {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.cart-header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.cart-header p {
+  color: #231100;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.cart-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.empty-cart-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.back-to-menu-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cart-search-container {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 10px 0;
+}
+
+.cart-search-container input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #e8f0ee;
+  font-size: 0.875rem;
+}
+
+.cart-search-container svg {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.cart-item {
+  display: flex;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.cart-item img {
+  width: 180px;
+  height: 110px;
+  border: 5px solid rgba(128, 128, 128, 0.301);
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+}
+
+.cart-item-details p {
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.cart-item-size {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.cart-quantity-controls {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.cart-quantity-controls button {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cart-quantity-controls span {
+  margin: 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.cart-remove-btn {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.cooking-instructions {
+  font-size: 0.75rem;
+  color: #8c7b7b;
+  margin: 1rem 0;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cooking-instructions span {
+  color: #333;
+  text-decoration: underline dotted #333 1px;
+}
+
+.order-type {
+  display: flex;
+  margin: 1.5rem 0;
+  background: #dddddd;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.order-type button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.order-type button.active {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart summary styling */
+.cart-summary {
+  margin: 1rem 0;
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: #666;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.cart-summary-row:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.cart-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Customer details styling */
+.customer-details {
+  margin: 1.5rem 0;
+}
+
+.customer-details h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.customer-info {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.delivery-address {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.delivery-address svg {
+  margin-right: 0.5rem;
+  color: #4caf50;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.delivery-time {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.delivery-time svg {
+  margin-right: 0.5rem;
+  color: #4caf50;
+}
+
+/* Swipe button styling */
+.swipe-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  background: white;
+  margin: 1.5rem 0 0.5rem;
+  overflow: hidden;
+  height: 56px;
+}
+
+.swipe-button-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  cursor: grab;
+  touch-action: none;
+}
+
+.swipe-button-text {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.swipe-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.swipe-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: rgba(76, 175, 80, 0.1);
+  transition: width 0.1s;
+}
+
+.swipe-complete .swipe-progress {
+  background: rgba(76, 175, 80, 0.2);
+}
+
+/* Modal styles for both cooking instructions and user details */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  position: relative;
+  padding: 1.5rem;
+  background: #e8f0ee;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #333;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Shared input styles */
+.details-input,
+.details-textarea,
+.instructions-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.details-textarea,
+.instructions-textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.instructions-note {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-cancel {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal-submit {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user-details-btn {
+  display: block;
+  width: 150px;
+  padding: 0.75rem;
+  background-color: #505050;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 1rem 0;
+  text-align: center;
+}
+.mt-4 button{
+  width: 120px;
+  height: 40px;
+  padding: 1px;
+  /* margin: 10px; */
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
