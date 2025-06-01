@@ -108,7 +108,7 @@ export const MenuController = () => {
   const totalAmount = getTotalPrice(cart);
   const getCategories = async () => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      "https://restaurant-management-backend-rv3e.onrender.com/api/v1/menu/categories"
+      "https://restaurant-management-backend-bntp.onrender.com/api/v1/menu/categories"
     );
 
     if (data?.status == "success") {
@@ -118,7 +118,7 @@ export const MenuController = () => {
 
   const getMenuData = async () => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      `https://restaurant-management-backend-rv3e.onrender.com/api/v1/menu/category/${activeCategory}`
+      `https://restaurant-management-backend-bntp.onrender.com/api/v1/menu/category/${activeCategory}`
     );
     if (data?.status == "success") {
       setProducts(data?.data?.menuItems);

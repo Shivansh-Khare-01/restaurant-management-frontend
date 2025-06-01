@@ -45,7 +45,7 @@ const TableController = () => {
 
   const getTableData = async () => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      "https://restaurant-management-backend-rv3e.onrender.com/api/v1/tables"
+      "https://restaurant-management-backend-bntp.onrender.com/api/v1/tables"
     );
     if (data?.status === "success") {
       setTables(data?.data?.tables);
@@ -54,7 +54,7 @@ const TableController = () => {
 
   const deleteTable = async (id: any) => {
     const data = await AnalyticsService?.deleteItem(
-      `https://restaurant-management-backend-rv3e.onrender.com/api/v1/tables/${id}`
+      `https://restaurant-management-backend-bntp.onrender.com/api/v1/tables/${id}`
     );
     if (data?.status === "success") {
       getTableData();
@@ -63,7 +63,7 @@ const TableController = () => {
   const createTable = async (chairs: any) => {
     const chairscount = { chairs };
     const data = await AnalyticsService.postAnalyticsData(
-      `https://restaurant-management-backend-rv3e.onrender.com/api/v1/tables`,
+      `https://restaurant-management-backend-bntp.onrender.com/api/v1/tables`,
       chairscount
     );
     if (data?.status === "success") {

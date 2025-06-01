@@ -6,7 +6,7 @@ export const OrderListingController = () => {
 
   const getOrders = async () => {
     const orderData = await AnalyticsService.getCategoriesAndSubCategories(
-      "https://restaurant-management-backend-rv3e.onrender.com/api/v1/orders"
+      "https://restaurant-management-backend-bntp.onrender.com/api/v1/orders"
     );
     if (orderData?.status === "success") {
       setOrders(orderData?.data?.orders);

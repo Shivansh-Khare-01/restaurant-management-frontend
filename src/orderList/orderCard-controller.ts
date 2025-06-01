@@ -40,7 +40,7 @@ export const OrderCardController = (order: any) => {
   const handleStatusChange = async (e: any, id: any) => {
     const newStatus = e.target?.value;
     const data = await AnalyticsService?.updateItem(
-      `https://restaurant-management-backend-rv3e.onrender.com/api/v1/orders/${id}/status`,
+      `https://restaurant-management-backend-bntp.onrender.com/api/v1/orders/${id}/status`,
       {
         status: newStatus,
       }

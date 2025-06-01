@@ -20,7 +20,7 @@ const AnalyticsController = () => {
 
   const getMetricsData = async () => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      "https://restaurant-management-backend-rv3e.onrender.com/api/v1/analytics/metrics"
+      "https://restaurant-management-backend-bntp.onrender.com/api/v1/analytics/metrics"
     );
     if (data?.status === "success") {
       setMetricsData(data?.data);
@@ -29,7 +29,7 @@ const AnalyticsController = () => {
 
   const getRevenueData = async (timespan: any) => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      `https://restaurant-management-backend-rv3e.onrender.com/api/v1/analytics/revenue?timespan=${timespan}`
+      `https://restaurant-management-backend-bntp.onrender.com/api/v1/analytics/revenue?timespan=${timespan}`
     );
     if (data?.status === "success") {
       const revenueLabels = data?.data?.revenues?.map((r: any) => r?.label);
@@ -40,7 +40,7 @@ const AnalyticsController = () => {
 
   const getOrderSummryData = async (timespan: any) => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      `https://restaurant-management-backend-rv3e.onrender.com/api/v1/analytics/order-summary?timespan=${timespan}`
+      `https://restaurant-management-backend-bntp.onrender.com/api/v1/analytics/order-summary?timespan=${timespan}`
     );
     if (data?.status === "success") {
       setOrderSummaryData(data?.data);
@@ -50,7 +50,7 @@ const AnalyticsController = () => {
 
   const getTableData = async () => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      "https://restaurant-management-backend-rv3e.onrender.com/api/v1/tables"
+      "https://restaurant-management-backend-bntp.onrender.com/api/v1/tables"
     );
     if (data?.status === "success") {
       setTablesData(data?.data?.tables);
@@ -59,7 +59,7 @@ const AnalyticsController = () => {
 
   const getChefsData = async () => {
     const data = await AnalyticsService.getCategoriesAndSubCategories(
-      "https://restaurant-management-backend-rv3e.onrender.com/api/v1/chefs"
+      "https://restaurant-management-backend-bntp.onrender.com/api/v1/chefs"
     );
     if (data?.status === "success") {
       setChefsData(data?.data?.chefs);

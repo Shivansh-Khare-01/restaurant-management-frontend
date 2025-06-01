@@ -225,7 +225,7 @@ export const cartController = () => {
   const createOrder = async (data: any) => {
     try {
       const response = await AnalyticsService.postAnalyticsData(
-        "https://restaurant-management-backend-rv3e.onrender.com/api/v1/orders",
+        "https://restaurant-management-backend-bntp.onrender.com/api/v1/orders",
         data
       );
       if (response?.status === "success") {
