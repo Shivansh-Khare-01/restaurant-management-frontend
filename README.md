@@ -4,7 +4,7 @@ Follow these steps to set up and run the project on your local machine:
 
 1. **Clone the Repository**  
   ```bash
-  git clone https://github.com/Shivansh-Khare-98/restaurant-management-frontend.git
+  git clone https://github.com/Shivansh-Khare-01/restaurant-management-frontend.git
   cd restaurant-management-frontend
   ```
 
